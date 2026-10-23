@@ -16,6 +16,7 @@ export const personas = {
     id: 'gig',
     name: 'Rajesh Kumar',
     label: 'Gig Delivery Partner',
+    city: 'Bengaluru',
     tagline: 'Swiggy & Zepto delivery executive, navigating daily fluctuating earnings',
     income: {
       type: 'irregular',
@@ -92,6 +93,7 @@ export const personas = {
     id: 'student',
     name: 'Ananya Sharma',
     label: 'College Student & Intern',
+    city: 'Pune',
     tagline: 'Final year B.Tech student juggling college stipend, parental allowance, and education loan',
     income: {
       type: 'regular',
@@ -164,6 +166,7 @@ export const personas = {
     id: 'shopkeeper',
     name: 'Ramesh Patel',
     label: 'Kirana Store Merchant',
+    city: 'Surat',
     tagline: 'Owner of Shree Ganesh Kirana & General Store in Surat, balancing store cashflows and family savings',
     income: {
       type: 'irregular',
@@ -238,6 +241,7 @@ export const personas = {
     id: 'family',
     name: 'The Deshmukh Family',
     label: 'Salaried Dual-Income Household',
+    city: 'Pune',
     tagline: 'Vikram (IT Project Lead) & Priya (High School Teacher) with two school-going kids in Pune',
     income: {
       type: 'regular',
@@ -315,6 +319,7 @@ export const personas = {
     id: 'senior',
     name: 'Col. S. N. Murthy (Retd.)',
     label: 'Senior Citizen & Pensioner',
+    city: 'Bengaluru',
     tagline: '68-year-old retired defense officer managing fixed pension, bank deposits, and legacy estate planning',
     income: {
       type: 'regular',
@@ -389,6 +394,7 @@ export const personas = {
     id: 'shg',
     name: 'Sunita Devi & Pragati Bachat Gat',
     label: 'Women\'s SHG Leader',
+    city: 'Wardha',
     tagline: 'Leader of 12-woman Self-Help Group in Wardha, maintaining collective ledger and rural enterprise',
     income: {
       type: 'irregular',
@@ -461,3 +467,6 @@ export const personas = {
     ]
   }
 };
+
+export const PERSONAS = personas;
+export default personas;

@@ -65,10 +65,32 @@ export function PersonaProvider({ children }) {
   };
 
   const persona = personas[personaId] || personas.gig;
+  const allPersonas = Object.values(personas);
 
   const t = (key) => {
+    if (!key) return '';
     const langDict = translations[lang] || translations.en;
-    return langDict[key] || translations.en[key] || key;
+    if (langDict[key] !== undefined) return langDict[key];
+    if (key.includes('.')) {
+      const parts = key.split('.');
+      let cur = langDict;
+      for (const p of parts) {
+        if (cur && cur[p] !== undefined) cur = cur[p];
+        else { cur = undefined; break; }
+      }
+      if (cur !== undefined && typeof cur !== 'object') return cur;
+      let enCur = translations.en;
+      for (const p of parts) {
+        if (enCur && enCur[p] !== undefined) enCur = enCur[p];
+        else { enCur = undefined; break; }
+      }
+      if (enCur !== undefined && typeof enCur !== 'object') return enCur;
+    }
+    return translations.en[key] || key;
+  };
+
+  const getTranslationFn = (targetLang = lang) => {
+    return translations[targetLang] || translations.en;
   };
 
   return (
@@ -77,17 +99,21 @@ export function PersonaProvider({ children }) {
         persona,
         personaId,
         setPersonaId,
+        allPersonas,
         lang,
         setLang,
         hasConsented,
         setHasConsented,
         t,
+        getTranslation: getTranslationFn,
       }}
     >
       {children}
     </PersonaContext.Provider>
   );
 }
+
+export { getTranslation } from '../i18n.js';
 
 export function usePersona() {
   const context = useContext(PersonaContext);
