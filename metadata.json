@@ -1,0 +1,6 @@
+{
+  "name": "CashHelix - Financial Well-being",
+  "description": "Financial well-being platform for India with health scoring, hidden charge detection, insurance gap analysis, and multilingual voice assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
