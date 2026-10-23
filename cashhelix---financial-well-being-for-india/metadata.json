@@ -1,6 +1,0 @@
-{
-  "name": "CashHelix - Financial Well-Being for India",
-  "description": "Mobile-first financial well-being platform tailored for diverse Indian personas with Account Aggregator insights, cashflow forecasting, and Goal GPS.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
