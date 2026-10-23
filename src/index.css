@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+@theme {
+  --color-ivory: #F8F4EC;
+  --color-ivory-light: #FDFBF7;
+  --color-ivory-dark: #EDE7DC;
+  --color-plum: #51243A;
+  --color-plum-dark: #3A1929;
+  --color-plum-deep: #2A101C;
+  --color-plum-light: #6E334F;
+  --color-gold: #C6A15B;
+  --color-gold-light: #DFC486;
+  --color-gold-dark: #A3803F;
+  --color-charcoal: #24232A;
+  --color-charcoal-muted: #54525C;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F8F4EC;
+  color: #24232A;
+}
+
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
